@@ -1,5 +1,15 @@
 let lettres = "abcdefghijklmnopqrstuvyz";
-let mots = ["papa", "maman", "papy", "pomme", "banane", "ananas","chien","chat","madam",];
+let mots = [
+  "papa",
+  "maman",
+  "papy",
+  "pomme",
+  "banane",
+  "ananas",
+  "chien",
+  "chat",
+  "madam",
+];
 let randomIndex = Math.floor(Math.random() * mots.length);
 let randomMot = mots[randomIndex];
 let tabloLettre = lettres.split("");
@@ -32,9 +42,9 @@ divLettres.appendChild(h3);
 
 let ResetButton = document.createElement("button");
 divContainer.appendChild(ResetButton);
-ResetButton.innerText="Reset"
-ResetButton.className="reset"
- 
+ResetButton.innerText = "Reset";
+ResetButton.className = "reset";
+
 let placeholder = [];
 
 for (let i = 0; i < randomMot.length; i++) {
@@ -55,48 +65,36 @@ for (let i = 0; i < tabloLettre.length; i++) {
     for (let j = 0; j < randomMot.length; j++) {
       if (randomMot[j] === lettres) {
         placeholder[j] = lettres;
-        console.log(placeholder)
+        console.log(placeholder);
       }
       if (randomMot.includes(lettres)) {
         message.innerText = "bravo";
       } else {
         message.innerText = "wrong letter";
       }
-     
     }
 
     h2.innerText = placeholder.join(" ");
-    console.log(placeholder)
-    console.log(placeholder.join(" "));   
-    
+    console.log(placeholder);
+    console.log(placeholder.join(" "));
+
     if (placeholder.join("") === randomMot) {
-      message.innerText = "YOU WON!:D"	;
+      message.innerText = "YOU WON!:D";
     }
-
   });
-  
-
 }
 
-function reset(){
+function reset() {
+  randomIndex = Math.floor(Math.random() * mots.length);
+  randomMot = mots[randomIndex];
 
-   
-
-  
-    randomIndex = Math.floor(Math.random() * mots.length);
-    randomMot = mots[randomIndex];
-
-   
-    placeholder = [];
-    for (let i = 0; i < randomMot.length; i++) {
-        placeholder.push("_");
-    }
-    h1.innerText = randomMot;  
-    h2.innerText = placeholder.join(" ");  
-    message.innerText = "";  
+  placeholder = [];
+  for (let i = 0; i < randomMot.length; i++) {
+    placeholder.push("_");
+  }
+  h1.innerText = randomMot;
+  h2.innerText = placeholder.join(" ");
+  message.innerText = "";
 }
 
-     
-  
-
-document.getElementsByClassName("reset")[0].addEventListener("click",reset)
+document.getElementsByClassName("reset")[0].addEventListener("click", reset);
