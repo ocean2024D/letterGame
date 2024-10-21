@@ -14,8 +14,7 @@ body{
 }
 
 .headline{
-    max-width: 600px;
-    max-height: 600px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,14 +41,14 @@ border:solid 6px rgb(12, 68, 80);
     font-size:50px;
 }
 h1{
-    font-size: 75px;
+    font-size: 65px;
     color: greenyellow;
 
 }
 h2{
-    font-size: 75px;
-    margin-left: 30px;
-    padding: 60px;
+    font-size: 65px;
+
+   
   
 }
 
@@ -61,13 +60,26 @@ p{
 @media screen and (max-width: 780px) {
     body {
       background-color: rgb(17, 19, 17);
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 10px;
     }
     .button {
-        max-width: 600px;
-        max-height: 600px;
+        max-width: 300px;
+        max-height: 500px;
         display: grid;
         gap: 9px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-       place-content: center;
+       place-items: center;
     
     }
+    .headline{
+        max-width: 600px;
+          display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    padding: 4px;
+    }
+}
