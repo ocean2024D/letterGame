@@ -8,7 +8,7 @@ let mots = [
   "ananas",
   "chien",
   "chat",
-  "madam",
+  "madame",
 ];
 let randomIndex = Math.floor(Math.random() * mots.length);
 let randomMot = mots[randomIndex];
